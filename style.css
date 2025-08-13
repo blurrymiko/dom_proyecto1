@@ -7,8 +7,6 @@
   --fuente-principal: 'Roboto', sans-serif;
 }
 
-/* Último añadido. Intento imitar las webs de referencia para centrar el contenido a una escala razonable aunque el ancho de pantalla se inmenso */
-
 .contenedor-ancho {
   max-width: 1200px;
   margin: 0 auto;
@@ -283,6 +281,44 @@ main {
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
 }
 
+.novedades-wrapper {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.filtros-novedades {
+  background-color: var(--color-rosa);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+}
+
+.filtros-novedades h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.filtros-novedades form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filtros-novedades label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filtros-novedades input[type='radio'] {
+  accent-color: #222;
+}
+
 .ereaders .productos-grid {
   grid-template-columns: repeat(4, 1fr);
 }
@@ -526,6 +562,14 @@ footer p {
 
   .estreno-destacado {
     grid-template-columns: 1fr;
+  }
+
+  .novedades-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .filtros-novedades {
+    order: -1;
   }
 
   .ereaders .productos-grid {

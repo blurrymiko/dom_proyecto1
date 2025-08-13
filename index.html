@@ -1,6 +1,8 @@
-<!-- Módulo 4. Desarrollo web CSS (Entrega: Proyecto I)-->
+<!-- Módulo 6. Desarrollo web DOM (Entrega: Proyecto II) -->
 
 <!-- Usada como referencia principal https://www.kobo.com/es/es y como referencia secundaria https://www.bookcenter.es/ -->
+
+<!-- Se parte de la base del proyecto de tienda online entregado en el Proyecto 1 de CSS. La sección de filtrado se implementa en la sección NOVEDADES, aunque los también DISPOSITIVOS se insertan desde JavaScript  -->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -152,159 +154,29 @@
 
       <section class="novedades" id="novedades">
         <h2>NOVEDADES</h2>
-        <div class="productos-grid">
-          <article>
-            <a
-              href="https://www.kobo.com/es/es/ebook/la-chica-que-vive-al-final-del-camino"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                src="https://cdn.kobo.com/book-images/a46c9596-9286-4216-89cc-73ada0006385/353/569/90/False/la-chica-que-vive-al-final-del-camino.jpg"
-                alt="La chica que vive al final del camino"
-              />
-              <h3>La chica que vive al final del camino</h3>
-              <p>Laird Koenig</p>
-              <span>13,29€</span>
-            </a>
-          </article>
-          <article>
-            <a
-              href="https://www.kobo.com/es/es/ebook/donde-nacen-las-bestias"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                src="https://cdn.kobo.com/book-images/3b6ac656-aaf1-4af8-bd63-3c7ce67880ab/353/569/90/False/donde-nacen-las-bestias.jpg"
-                alt="Donde nacen las bestias"
-              />
-              <h3>Donde nacen las bestias</h3>
-              <p>Pedro Feijoo</p>
-              <span>9,49€</span>
-            </a>
-          </article>
-          <article>
-            <a
-              href="https://www.kobo.com/es/es/ebook/nunca-mientas"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                src="https://cdn.kobo.com/book-images/7bc75543-b3db-4855-91f3-1688daf5c213/353/569/90/False/nunca-mientas.jpg"
-                alt="Nunca mientas"
-              />
-              <h3>Nunca mientas</h3>
-              <p>Freida McFadden</p>
-              <span>9,49€</span>
-            </a>
-          </article>
-          <article>
-            <a
-              href="https://www.kobo.com/es/es/ebook/no-tengas-miedo-3"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                src="https://cdn.kobo.com/book-images/e9958aae-542c-4ee1-ac48-1910ec665ef5/353/569/90/False/no-tengas-miedo-3.jpg"
-                alt="No tengas miedo"
-              />
-              <h3>No tengas miedo</h3>
-              <p>Stephen King</p>
-              <span>12,34€</span>
-            </a>
-          </article>
-          <article>
-            <a
-              href="https://www.kobo.com/es/es/ebook/la-asistenta-la-asistenta-1-1"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                src="https://cdn.kobo.com/book-images/52bbf8e8-e8bd-4b9e-a0b0-005d7b6e6fae/353/569/90/False/la-asistenta-la-asistenta-1-1.jpg"
-                alt="La asistenta"
-              />
-              <h3>La asistenta</h3>
-              <p>Freida McFadden</p>
-              <span>9,49€</span>
-            </a>
-          </article>
-          <article>
-            <a
-              href="https://www.kobo.com/es/es/ebook/las-abandonadas"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                src="https://cdn.kobo.com/book-images/c3ee6560-5458-4556-8b46-d356b4c4ea52/353/569/90/False/las-abandonadas.jpg"
-                alt="Las abandonadas"
-              />
-              <h3>Las abandonadas</h3>
-              <p>J.D. Barker</p>
-              <span>11,39€</span>
-            </a>
-          </article>
-        </div>
+          <div class="novedades-wrapper">
+<section class="filtros-novedades">
+
+  <form id="filter-form">
+    <label><input type="radio" name="filtro" value="all" checked> Todos</label>
+    <label><input type="radio" name="filtro" value="bestseller"> Best Sellers</label>
+    <label><input type="radio" name="filtro" value="<10"> Menos de 10€</label>
+    <label><input type="radio" name="filtro" value=">10"> Más de 10€</label>
+    <label><input type="radio" name="filtro" value="spanish"> Castellano</label>
+    <label><input type="radio" name="filtro" value="english"> Inglés</label>
+    <label><input type="radio" name="filtro" value="terror"> Terror</label>
+    <label><input type="radio" name="filtro" value="thriller"> Thriller psicológico</label>
+  </form>
+</section>
+
+        <div class="productos-grid" id="productos-novedades">
+                  </div>
+                  </div>
       </section>
 
       <section class="ereaders" id="ereaders">
         <h2>DISPOSITIVOS</h2>
         <div class="productos-grid">
-          <article>
-            <a
-              href="https://es.kobobooks.com/products/kobo-elipsa-2e"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                src="https://es.kobobooks.com/cdn/shop/files/ES-ES_1-DeviceStylus_1080x1080_9acd7bcf-de51-46de-8bd3-610d77a05432_575x575.jpg?v=1729014066"
-                alt="Kobo Elipsa 2E"
-              />
-              <h3>Kobo Elipsa 2E</h3>
-              <span>349,99€</span>
-            </a>
-          </article>
-          <article>
-            <a
-              href="https://es.kobobooks.com/products/kobo-clara-bw"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                src="https://es.kobobooks.com/cdn/shop/files/1-Spa-BW-ES-ES-Device_Front_1080x1080_0bc13994-8628-4d73-948a-be1e0d15dd3e_575x575.png?v=1710945156"
-                alt="Kobo Clara BW"
-              />
-              <h3>Kobo Clara BW</h3>
-              <span>149,99€</span>
-            </a>
-          </article>
-          <article>
-            <a
-              href="https://es.kobobooks.com/products/kobo-sage"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                src="https://es.kobobooks.com/cdn/shop/files/Cadmus_Dual_ES_575x575.jpg?v=1722543647"
-                alt="Kobo Sage"
-              />
-              <h3>Kobo Sage</h3>
-              <span>299,99€</span>
-            </a>
-          </article>
-          <article>
-            <a
-              href="https://es.kobobooks.com/products/kobo-libra-colour"
-              target="_blank"
-              rel="noopener"
-            >
-              <img
-                src="https://es.kobobooks.com/cdn/shop/files/2-Monza-Black-StylusAttached-ES-ES-Device_1080x1080_3dd4bb21-18f9-48fe-8042-a36e8b3e6072_431x431.png?v=1711574294"
-                alt="Kobo Libra Colour"
-              />
-              <h3>Kobo Libra Colour</h3>
-              <span>219,99€</span>
-            </a>
-          </article>
         </div>
       </section>
 
@@ -405,5 +277,6 @@
       </div>
     </footer>
     
+    <script src="main.js"></script>
   </body>
 </html>
